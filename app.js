@@ -13,9 +13,15 @@ const port = config.port || 3000;
 app.set('view engine', 'pug');
 
 app.get('/', homeController.getHome);
-app.get('/campaigns/:id', campaignController.getCampaign);
-app.get('/dacs/:id', dacController.getDac);
-app.get('/campaigns/:campaignId/milestones/:id', milestoneController.getMilestone);
+
+app.get('/campaigns/:id', campaignController.getCampaignById);
+app.get('/campaign/:slug', campaignController.getCampaignBySlug);
+
+app.get('/dacs/:id', dacController.getDacById);
+app.get('/dac/:slug', dacController.getDacBySlug);
+
+app.get('/campaigns/:campaignId/milestones/:id', milestoneController.getMilestoneById);
+app.get('/milestone/:slug', milestoneController.getMilestoneBySlug);
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
