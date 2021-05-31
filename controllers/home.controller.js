@@ -1,6 +1,3 @@
-const MilestoneModel = require('../models/milestone.model');
-const htmlUtil = require('../utils/htmlUtil');
-
 module.exports = {
     getHome: async (req, res) => {
         res.render('home', {
