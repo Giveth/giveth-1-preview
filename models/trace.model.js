@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const Campaign = mongoose.model('dac', 
+const Campaign = mongoose.model('trace',
 {
     title: { type: String, required: true },
     description: { type: String, required: true },
